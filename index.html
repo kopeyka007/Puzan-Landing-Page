@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="shortcut icon" href="images/star.png" type="favicon/ico" /> -->
+
+        <title>Комплексні обіди</title>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/owl.theme.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/flexslider.css">
+        <link rel="stylesheet" href="css/pricing.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet"> 
+        <script src="js/jquery-1.11.2.min.js"></script>
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script src="js/jquery.spincrement.js"></script>
+        <script type="text/javascript" src="js/jquery.flexslider.min.js"></script>
+        <script type="text/javascript">
+            $(window).load(function() {
+                $('.flexslider').flexslider({
+                 animation: "slide",
+                 controlsContainer: ".flexslider-container"
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function(){
+    var show = true;
+    var countbox = "#counts";
+    $(window).on("scroll load resize", function(){
+        if(!show) return false;                   // Отменяем показ анимации, если она уже была выполнена
+        var w_top = $(window).scrollTop();        // Количество пикселей на которое была прокручена страница
+        var e_top = $(countbox).offset().top;     // Расстояние от блока со счетчиками до верха всего документа
+        var w_height = $(window).height();        // Высота окна браузера
+        var d_height = $(document).height();      // Высота всего документа
+        var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
+        if(w_top + 200 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height){
+            $(".spincrement").spincrement({
+                thousandSeparator: "",
+                duration: 2500
+            });
+            show = false;
+        }
+    });
+});
+        </script>
+
+        
+
+
+
+    </head>
+    <body data-spy="scroll" data-target="#template-navbar">
+
+        <!--== 4. Navigation ==-->
+        <nav id="template-navbar" class="navbar navbar-default custom-navbar-default navbar-fixed-top" style="overflow: hidden;">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#Food-fair-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img id="logo" src="images/Logo_main.png" class="logo img-responsive" style="margin:0 auto;">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="Food-fair-toggle">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#about">Про нас</a></li>
+                        <li><a href="#pricing">Меню</a></li>
+                        <li><a href="#great-place-to-enjoy">Доставка</a></li>
+                        <li><a href="#reserve">Замовити</a></li>
+                        <li><a href="#contact">Персонал</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.row -->
+        </nav>
+
+
+        <!--== 5. Header ==-->
+        <section id="header-slider" class="owl-carousel">
+            <div class="item">
+                <div class="container">
+                    <div class="header-content header-content1  pull-left text-right">
+                        <h1 class="header-title">Смачно</h1>
+                        <p class="header-sub-title"></p>
+                    </div> <!-- /.header-content -->
+                </div>
+            </div>
+            <div class="item">
+                <div class="container">
+                    <div class="header-content pull-left text-right">
+                        <h1 class="header-title">Швидко</h1>
+                        <p class="header-sub-title"></p>
+                    </div> <!-- /.header-content -->
+                </div>
+            </div>
+            <div class="item">
+                <div class="container">
+                    <div class="header-content pull-left">
+                        <h1 class="header-title">Якісно</h1>
+                        <p class="header-sub-title"></p>
+                    </div> <!-- /.header-content -->
+                </div>
+            </div>
+        </section>
+
+
+
+        <!--== 6. About us ==-->
+        <section id="about" class="about">
+            <img src="images/icons/about_color.png" class="img-responsive section-icon hidden-sm hidden-xs">
+            <div class="wrapper">
+                <div class="container-fluid">
+                    <div class="row dis-table">
+                        <div class="hidden-xs col-sm-6 section-bg about-bg dis-table-cell">
+
+                        </div>
+                        <div class="col-xs-12 col-sm-6 dis-table-cell">
+                            <div class="section-content">
+                                <h2 class="section-content-title">Про нас</h2>
+                                <p class="section-content-para">
+                                   <strong>"Пузань"</strong> - це сервіс доставки домашньої їжі. Запрошуємо вас віддвідати класичну національну кухню не виходячи 
+                                   з офісу або дому, Серед різноманіття запашних перших страв, поживних других страв , смачних десертів кожен зможе знайти щось для себе.
+                                </p>
+                                <p class="section-content-para">
+                                   <blockquote> Наша мета - забезпечення якісного харчування<br/> зайнятих людей!</blockquote>
+                                </p>
+                            </div> <!-- /.section-content -->
+                        </div>
+                    </div> <!-- /.row -->
+                </div> <!-- /.container-fluid -->
+            </div> <!-- /.wrapper -->
+        </section> <!-- /#about -->
+
+
+        <!--==  7. Afordable Pricing  ==-->
+        <section id="pricing" class="pricing">
+            <div id="w">
+                <div class="pricing-filter">
+                    <div class="pricing-filter-wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <div class="section-header">
+                                        <h2 class="pricing-title">Меню</h2>
+                                        <ul id="filter-list" class="clearfix">
+                                            <li class="filter" data-filter="all">Всі страви</li>
+                                            <li class="filter" data-filter=".first-dish">Перші страви</li>
+                                            <li class="filter" data-filter=".second-dish">Другі страви</li>
+                                            <li class="filter" data-filter=".desert">Десерти</li>
+                                            <li class="filter" data-filter=".drinks">Напої</li>
+                                            <li class="filter" data-filter=".addition">Додатки</li>
+                                        </ul><!-- @end #filter-list -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row">  
+                        <div class="col-md-10 col-md-offset-1">
+                            <ul id="menu-pricing" class="menu-price">
+                                <li class="item first-dish">
+
+                                    <a href="#">
+                                        <img src="images/food/borshch.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Червоний борщ</h3>
+                                            
+                                            </span>
+                                        </div>
+                                    </a>
+                                        
+                                    <h2 class="white">22 грн</h2>
+                                </li>
+
+                                <li class="item first-dish">
+                                <a href="#">
+                                    <img src="images/food/kapusnyak.jpg" class="img-responsive" alt="Food" >
+                                    <div class="menu-desc">
+                                            <span>
+                                                <h3>Капусняк</h3>
+                                               
+                                            </span>
+                                    </div>
+                                </a>
+
+                                <h2 class="white">18 грн</h2>
+                                </li>
+
+                                <li class="item first-dish">
+
+                                    <a href="#">
+                                        <img src="images/food/goroh.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Гороховий суп</h3>
+                                               
+                                            </span>
+                                        </div>
+                                    </a>
+                                        
+                                    <h2 class="white">19 грн</h2>
+                                </li>
+                                <li class="item first-dish">
+
+                                    <a href="#">
+                                        <img src="images/food/zel-borshch.png" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Зелений борщ</h3>
+                                               
+                                            </span>
+                                        </div>
+                                    </a>
+                                        
+                                    <h2 class="white">20грн</h2>
+                                </li>
+
+                                <li class="item second-dish">
+
+                                    <a href="#">
+                                        <img src="images/food/deruny.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc text-center">
+                                            <span>
+                                                <h3>Деруни</h3>
+                                            
+                                            </span>
+                                        </div>
+                                    </a>
+                                        
+                                    <h2 class="white">30 грн</h2>
+                                </li>
+
+
+                                <li class="item second-dish">
+
+                                    <a href="#">
+                                        <img src="images/food/varenyki.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Вареники</h3>
+                                                з капустою , картопею , мясом
+                                            </span>
+                                        </div>
+                                    </a>
+                                        
+                                    <h2 class="white">25 грн</h2>
+                                </li>
+                                
+                                
+                                <li class="item second-dish">
+
+                                    <a href="#">
+                                        <img src="images/food/kapusta.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Тушкована капуста з мясом</h3>
+                                                
+                                            </span>
+                                        </div>
+                                    </a>
+
+                                    <h2 class="white">35 грн</h2>
+                                </li>
+                                <li class="item second-dish">
+
+                                    <a href="#">
+                                        <img src="images/food/grechka.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Гречана каша з шкварками</h3>
+                                              
+                                            </span>
+                                        </div>
+                                    </a>
+
+                                    <h2 class="white">17 грн</h2>
+                                </li>
+                                <li class="item second-dish">
+
+                                    <a href="#">
+                                        <img src="images/food/zrazy.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Картопляні зрази</h3>
+                                                
+                                            </span>
+                                        </div>
+                                    </a>
+
+                                    <h2 class="white">30 грн</h2>
+                                </li>
+                                <li class="item second-dish">
+                                    <a href="#">
+                                        <img src="images/food/ryba.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Риба під овочами</h3>
+                                            
+                                            </span>
+                                        </div>
+                                    </a>
+                                    
+                                    <h2 class="white">38грн</h2>
+                                </li>
+                                <li class="item desert">
+                                    <a href="#">
+                                        <img src="images/food/mlynci.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Млинці</h3>
+                                                з маком або сиром 
+                                            </span>
+                                        </div>
+                                    </a>
+                                    
+                                    <h2 class="white">25грн</h2>
+                                </li> 
+                                <li class="item desert">
+                                    <a href="#">
+                                        <img src="images/food/syrnyki.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Сирники</h3>
+                                                
+                                            </span>
+                                        </div>
+                                    </a>
+                                    
+                                    <h2 class="white">25грн</h2>
+                                </li> 
+                                <li class="item desert">
+                                    <a href="#">
+                                        <img src="images/food/solodki-varenyki.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Вареники з вишнею</h3>
+                                                
+                                            </span>
+                                        </div>
+                                    </a>
+                                    
+                                    <h2 class="white">35грн</h2>
+                                </li> 
+                                 <li class="item drinks">
+                                    <a href="#">
+                                        <img src="images/food/uzvar.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Узвар</h3>
+                                                
+                                            </span>
+                                        </div>
+                                    </a>
+                                    
+                                    <h2 class="white">15грн</h2>
+                                </li>
+                                <li class="item drinks">
+                                    <a href="#">
+                                        <img src="images/food/kampot.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Кампот</h3>
+                                                
+                                            </span>
+                                        </div>
+                                    </a>
+                                    
+                                    <h2 class="white">10грн</h2>
+                                </li> 
+                                <li class="item addition">
+                                    <a href="#">
+                                        <img src="images/food/pampushki.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Пампушки</h3>
+                                                
+                                            </span>
+                                        </div>
+                                    </a>
+                                    
+                                    <h2 class="white">10грн</h2>
+                                </li>
+                                <li class="item addition">
+                                    <a href="#">
+                                        <img src="images/food/salo.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Сало з часником</h3>
+                                                
+                                            </span>
+                                        </div>
+                                    </a>
+                                    
+                                    <h2 class="white">15 грн</h2>
+                                </li>
+                                <li class="item addition">
+                                    <a href="#">
+                                        <img src="images/food/smetana.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Сметана</h3>
+                                                
+                                            </span>
+                                        </div>
+                                    </a>
+                                    
+                                    <h2 class="white">10 грн</h2>
+                                </li> 
+                                <li class="item addition">
+                                    <a href="#">
+                                        <img src="images/food/hlib.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Хліб</h3>
+                                                
+                                            </span>
+                                        </div>
+                                    </a>
+                                    
+                                    <h2 class="white">5 грн</h2>
+                                </li>
+                                <li class="item addition">
+                                    <a href="#">
+                                        <img src="images/food/shokolad.jpg" class="img-responsive" alt="Food" >
+                                        <div class="menu-desc">
+                                            <span>
+                                                <h3>Шоколад</h3>
+                                                
+                                            </span>
+                                        </div>
+                                    </a>
+                                    
+                                    <h2 class="white">10 грн</h2>
+                                </li>                                                                                      
+                            </ul>
+
+                            <div class="text-center">
+                                    <a id="loadPricingContent" class="btn btn-middle hidden-sm hidden-xs">Load More <span class="caret"></span></a>
+                            </div>
+
+                        </div>   
+                    </div>
+                </div>
+
+            </div> 
+        </section>
+
+
+        <!--== 8. Great Place to enjoy ==-->
+        
+
+        <section id="great-place-to-enjoy" class="great-place-to-enjoy">
+            <section id="beer" class="beer">
+            <div class="container-fluid" id="counts">
+                <div class="row dis-table">
+                    <div class="hidden-xs col-sm-6 dis-table-cell section-bg">
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 dis-table-cell">
+                        <div class="section-content">
+                            <h2 class="section-content-title">Доставка</h2>
+                            <div class="section-description">
+                                <p class="section-content-para">
+                                    <img src="images/Logo_stick.png" width="90" height="auto" alt="image"/> 
+                                    здійснює доставку в будь-яку точку міста Рівного. Вартість доставки 30 грн. При замовлені від 200 грн
+                                    доставка безкоштовна. З нетерпінням чекаємо на ваші замовлення!
+                                </p>
+                                <p class="section-content-para">
+                                   
+                                </p>
+                                <div class="deliver-item ">
+                                <h4 class="grey">Час доставки</h2>
+                                <i class="fa fa-rocket fa-4x" aria-hidden="true"></i>
+                                <span class="spincrement large">45</span><span class="large"> хв</span>
+                                </div>
+
+                                <div class="deliver-item ">
+                                 <h4 class="grey">Телефон доставки</h2>
+                                <i class="fa fa-phone fa-4x" aria-hidden="true"></i>
+                                <span class="large">0</span><span class="spincrement large">972284648</span>
+                                </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+       
+        
+
+
+
+       
+
+        <!--== 15. Reserve A Table! ==-->
+  
+
+
+
+        <section class="reservation" id="reserve">
+            <img class="img-responsive section-icon hidden-sm hidden-xs" src="images/icons/reserve_color.png">
+            <div class="wrapper">
+                <div class="container-fluid">
+                    <div class=" section-content">
+                        <div class="row">
+                            <div class="col-md-5 col-sm-6">
+                                <form class="reservation-form" method="post" action="php/reserve.php">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control reserve-form empty iconified" name="name" id="name" required="required" placeholder="  &#xf007;  Імя">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="email" name="email" class="form-control reserve-form empty iconified" id="email" required="required" placeholder="  &#xf1d8;  e-mail">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <input type="tel" class="form-control reserve-form empty iconified" name="phone" id="phone" required="required" placeholder="  &#xf095;  Телефон">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control reserve-form empty iconified" name="datepicker" id="datepicker" required="required" placeholder="&#xf017;  Час">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12 col-sm-12">
+                                            <textarea type="text" name="message" class="form-control reserve-form empty iconified" id="message" rows="3" required="required" placeholder="  &#xf086;  Ваші побажання"></textarea>
+                                        </div>
+
+                                        <div class="col-md-12 col-sm-12">
+                                            <button onclick="send()" type="button" id="submit" name="submit" class="btn btn-reservation">
+                                                <span><i class="fa fa-check-circle-o"></i></span>
+                                                Замовити
+                                            </button>
+                                        </div>
+                                            
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="col-md-2 hidden-sm hidden-xs"></div>
+
+                            <div class="col-md-4 col-sm-6 col-xs-12">
+                                <div class="opening-time">
+                                    <h3 class="opening-time-title">Години роботи</h3>
+                                    <p>Пон - Пят: 9:00 - 18:30 </p>
+                                    <p>Суб - Нед: 10:00 - 17:00 </p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+<section id="fixed_button">
+    <div class="button_wraper text-center">
+        <div>
+        <span class="information">097 228 4648</span>
+         <span class="information">050 228 4648</span>
+      </div>
+        <i class="fa fa-phone fa-4x" aria-hidden="true"></i>
+
+    </div>
+</section>
+<script>
+  function send(){
+    var obj = {}
+
+    obj.name  = document.getElementById('name').value;
+    obj.email = document.getElementById('email').value; 
+    obj.phone = document.getElementById('phone').value; 
+    obj.message = document.getElementById('message').value;
+    console.log(obj)
+    $.ajax({
+        method: "POST",
+        data: obj,
+        success: function(){},
+        url:"php/reserve.php"
+    })
+
+   }
+</script>
+
+<script>
+    $( document ).ready(function() {
+
+
+$("#fixed_button").click(function(){
+    $(".information").toggleClass("show");
+    $('#fixed_button i').toggleClass("rotate");
+   
+})
+
+});
+
+</script>
+      
+
+    
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mixitup.min.js" ></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/jquery.validate.js"></script>
+        <script type="text/javascript" src="js/jquery.hoverdir.js"></script>
+        <script type="text/javascript" src="js/jQuery.scrollSpeed.js"></script>
+        <script src="js/script.js"></script>
+        
+
+    </body>
+</html>
